@@ -2,25 +2,29 @@
 @baseUrl = http://localhost:5000
 
 ### Task 1: Get all books
-GET {{baseUrl}}/
+GET http://localhost:5000/
 
 ### Task 2: Get book by ISBN
-GET {{baseUrl}}/isbn/1
+GET http://localhost:5000/isbn/1
+
+
+### Task 2: Get book by ISBN
+GET http://localhost:5000/isbn/100
 
 ### Task 3: Get books by author
-GET {{baseUrl}}/author/Unknown
+GET http://localhost:5000/author/Unknown
 
 ### Task 4: Get books by title
-GET {{baseUrl}}/title/The Epic Of Gilgamesh
+GET http://localhost:5000/title/The Epic Of Gilgamesh
 
 ### Task 5: Get book reviews by ISBN
-GET {{baseUrl}}/review/1
+GET http://localhost:5000/review/1
 
 ### Task 5 (negative): reviews for invalid ISBN
-GET {{baseUrl}}/review/999
+GET http://localhost:5000/review/999
 
 ### Task 6: Register a new user
-POST {{baseUrl}}/register
+POST http://localhost:5000/register
 Content-Type: application/json
 
 {
@@ -29,7 +33,7 @@ Content-Type: application/json
 }
 
 ### Task 6 (negative): Register same user again
-POST {{baseUrl}}/register
+POST http://localhost:5000/register
 Content-Type: application/json
 
 {
@@ -38,14 +42,14 @@ Content-Type: application/json
 }
 
 ### Task 6 (negative): Missing username/password
-POST {{baseUrl}}/register
+POST http://localhost:5000/register
 Content-Type: application/json
 
 {}
 
 ### Task 7: Login as registered user
 # Run this before Task 8/9 so the session cookie is stored.
-POST {{baseUrl}}/customer/login
+POST http://localhost:5000/customer/login
 Content-Type: application/json
 
 {
@@ -54,31 +58,31 @@ Content-Type: application/json
 }
 
 ### Task 8: Add review
-PUT {{baseUrl}}/customer/auth/review/1?review=Great%20book
+PUT http://localhost:5000/customer/auth/review/1?review=Great%20book
 
 ### Task 8: Modify review by same user
-PUT {{baseUrl}}/customer/auth/review/1?review=Updated%20review
+PUT http://localhost:5000/customer/auth/review/1?review=Updated%20review
 
 ### Verify Task 8 review was saved
-GET {{baseUrl}}/review/1
+GET http://localhost:5000/review/1
 
 ### Task 9: Delete own review
-DELETE {{baseUrl}}/customer/auth/review/1
+DELETE http://localhost:5000/customer/auth/review/1
 
 ### Verify Task 9 review was deleted
-GET {{baseUrl}}/review/1
+GET http://localhost:5000/review/1
 
 ### Get async books
-GET {{baseUrl}}/async/books
+GET http://localhost:5000/async/books
 
 
 ### Get async books by isbn
-GET {{baseUrl}}/async/isbn/1
+GET http://localhost:5000/async/isbn/1
 
 
 ### Get async books by author
-GET {{baseUrl}}/async/author/Unknown
+GET http://localhost:5000/async/author/Unknown
 
 
 ### Get async books by title
-GET {{baseUrl}}/async/title/The%20Epic%20Of%20Gilgamesh
+GET http://localhost:5000/async/title/The%20Epic%20Of%20Gilgamesh

@@ -1,0 +1,11 @@
+curl.exe -b cookies.txt -X PUT "http://localhost:5000/customer/auth/review/1?review=Great%20book"
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 39
+ETag: W/"27-er7B1Y38++I+DDGjJPTCAb7Ze7Y"
+Date: Thu, 13 Aug 2026 15:53:50 GMT
+Connection: close
+
+{"message":"Review added successfully"}
