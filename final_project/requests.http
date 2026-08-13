@@ -1,0 +1,70 @@
+
+@baseUrl = http://localhost:5000
+
+### Task 1: Get all books
+GET {{baseUrl}}/
+
+### Task 2: Get book by ISBN
+GET {{baseUrl}}/isbn/1
+
+### Task 3: Get books by author
+GET {{baseUrl}}/author/Unknown
+
+### Task 4: Get books by title
+GET {{baseUrl}}/title/The Epic Of Gilgamesh
+
+### Task 5: Get book reviews by ISBN
+GET {{baseUrl}}/review/1
+
+### Task 5 (negative): reviews for invalid ISBN
+GET {{baseUrl}}/review/999
+
+### Task 6: Register a new user
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+	"username": "testuser1",
+	"password": "testpass1"
+}
+
+### Task 6 (negative): Register same user again
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+	"username": "testuser1",
+	"password": "testpass1"
+}
+
+### Task 6 (negative): Missing username/password
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{}
+
+### Task 7: Login as registered user
+# Run this before Task 8/9 so the session cookie is stored.
+POST {{baseUrl}}/customer/login
+Content-Type: application/json
+
+{
+	"username": "testuser1",
+	"password": "testpass1"
+}
+
+### Task 8: Add review
+PUT {{baseUrl}}/customer/auth/review/1?review=Great%20book
+
+### Task 8: Modify review by same user
+PUT {{baseUrl}}/customer/auth/review/1?review=Updated%20review
+
+### Verify Task 8 review was saved
+GET {{baseUrl}}/review/1
+
+### Task 9: Delete own review
+DELETE {{baseUrl}}/customer/auth/review/1
+
+### Verify Task 9 review was deleted
+GET {{baseUrl}}/review/1
+
