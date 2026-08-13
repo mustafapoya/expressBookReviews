@@ -8,4 +8,6 @@ ETag: W/"27-er7B1Y38++I+DDGjJPTCAb7Ze7Y"
 Date: Thu, 13 Aug 2026 15:53:50 GMT
 Connection: close
 
-{"message":"Review added successfully"}
+{
+  "message" : "Review added successfully"
+}
