@@ -68,3 +68,17 @@ DELETE {{baseUrl}}/customer/auth/review/1
 ### Verify Task 9 review was deleted
 GET {{baseUrl}}/review/1
 
+### Get async books
+GET {{baseUrl}}/async/books
+
+
+### Get async books by isbn
+GET {{baseUrl}}/async/isbn/1
+
+
+### Get async books by author
+GET {{baseUrl}}/async/author/Unknown
+
+
+### Get async books by title
+GET {{baseUrl}}/async/title/The%20Epic%20Of%20Gilgamesh
