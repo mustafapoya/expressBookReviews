@@ -1,20 +1,18 @@
 curl "http://localhost:5000/title/The%20Epic%20Of%20Gilgamesh"
 
 
-StatusCode        : 200
-StatusDescription : OK
-Content           : {"4":{"author":"Unknown","title":"The Epic Of Gilgamesh","reviews":{}}}
-RawContent        : HTTP/1.1 200 OK
-                    Connection: keep-alive
-                    Keep-Alive: timeout=5
-                    Content-Length: 71
-                    Content-Type: application/json; charset=utf-8
-                    Date: Thu, 13 Aug 2026 15:43:04 GMT
-                    ETag: W/"47-FUPADBvUMpqMo4zMFRBb...
-Forms             : {}
-Headers           : {[Connection, keep-alive], [Keep-Alive, timeout=5], [Content-Length, 71], [Content-Type, application/json; charset=utf-8]...}
-Images            : {}
-InputFields       : {}
-Links             : {}
-ParsedHtml        : mshtml.HTMLDocumentClass
-RawContentLength  : 71
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 71
+ETag: W/"47-FUPADBvUMpqMo4zMFRBbRNwgSWs"
+Date: Thu, 13 Aug 2026 16:29:47 GMT
+Connection: close
+
+{
+  "4": {
+    "author": "Unknown",
+    "title": "The Epic Of Gilgamesh",
+    "reviews": {}
+  }
+}
